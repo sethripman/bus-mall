@@ -5,3 +5,8 @@ export const getRandomItem = (itemData) => {
     return itemData[randomItemIndex];
 };
 
+//generates and returns an array of the current three IDs to be stored locally / compared against for dupes
+export const storePreviousDisplay = (firstId, secondId, thirdId) => {
+    const previousDisplay = [firstId, secondId, thirdId];
+    return previousDisplay;
+};

@@ -7,10 +7,8 @@ At the end of the 25 selections, the result array is also stored locally into an
 Order of Work:
 Generate an full set api array that contains the items with the three values. √
 Write a utility function to return a random item from the full set. √
-Store the previous items in a previous-set array.
-Check the previous-set array. If there is overlap or duplicates in the current set, return another random item until three non-dupes are present.
-Splice the new items into this set, overwriting the previous items.
-Test these functions.
+Write a utility function to store the previous items in a previous-set array. √
+Write a generate choices function to grab three choices without duplicates. Check the previous-set array. If there is overlap or duplicates in the current set, return another random item until three non-dupes are present.
 Write display functions to generate three image radio buttons.
 Add an event handler that listens for click and stores the relevant data.
 This storage is an array with the id of each item, the number of times displayed, and the number of times clicked.
