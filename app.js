@@ -1,7 +1,10 @@
 import { itemData } from './src/api.js';
+import { getRandomItem, storePreviousDisplay, generateChoices } from '../src/utils.js';
+
+let previousDisplayArray = ['', '', ''];
 
 
-// Event listener logic
+/* Event listener logic
 let correctAnswer;
 
 const handleRadioButtonClick = (event) => {
@@ -15,4 +18,4 @@ const handleRadioButtonClick = (event) => {
 
 treeRadioTags.forEach((radioTag) => {
     radioTag.addEventListener('click', handleRadioButtonClick);
-});
+});*/

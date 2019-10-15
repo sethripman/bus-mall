@@ -1,6 +1,6 @@
 // IMPORT MODULES under test here:
 // import example from '../src/example.js';
-import { storePreviousDisplay, generateChoices } from '../src/utils.js';
+import { storePreviousDisplay } from '../src/utils.js';
 
 const test = QUnit.test;
 
