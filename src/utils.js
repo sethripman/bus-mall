@@ -1,14 +1,7 @@
-let correctAnswer;
+// This takes an array and returns a random item from the array
+export const getRandomItem = (itemData) => {
+    const randomItemIndex = Math.floor(Math.random() * itemData.length);
 
-const handleRadioButtonClick = (event) => {
-    if (event.target.value === correctAnswer.id) {
-        myWins++;
-        trees.removeTreeById(event.target.value);
-    } else {
-        alert('boooo');
-    }
+    return itemData[randomItemIndex];
 };
 
-treeRadioTags.forEach((radioTag) => {
-    radioTag.addEventListener('click', handleRadioButtonClick);
-});
