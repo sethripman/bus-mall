@@ -1,14 +1,102 @@
 export const itemData = [
     {
-        id: 'big-leaf-maple',
-        name: 'Big Leaf Maple',
-        image: '../assets/trees/big-leaf-maple.jpg',
-        description: 'Acer macrophyllum, the bigleaf maple or Oregon maple, is a large deciduous tree in the genus Acer. It can grow up to 157.80 feet (48.10 m) tall, but more commonly reaches 15–20 m (50–65 ft) tall. It is native to western North America, mostly near the Pacific coast, from southernmost Alaska to southern California.'
+        id: 'bag',
+        name: 'Bag',
+        image: '../assets/bag.jpg',
     },
     {
-        id: 'douglas-fir',
-        name: 'Douglas Fir',
-        image: '../assets/trees/douglas-fir.jpg',
-        description: 'Douglas fir, (genus Pseudotsuga), genus of about six species of evergreen trees of the conifer family Pinaceae, native to western North America and eastern Asia. The trees are important timber trees, and the strong wood is used in boats, aircraft, and construction.'
+        id: 'banana',
+        name: 'Banana',
+        image: '../assets/banana.jpg',
+    },
+    {
+        id: 'bathroom',
+        name: 'Bathroom',
+        image: '../assets/bathroom.jpg',
+    },
+    {
+        id: 'boots',
+        name: 'Boots',
+        image: '../assets/boots.jpg',
+    },
+    {
+        id: 'breakfast',
+        name: 'Breakfast',
+        image: '../assets/breakfast.jpg',
+    },
+    {
+        id: 'bubblegum',
+        name: 'Bubblegum',
+        image: '../assets/bubblegum.jpg',
+    },
+    {
+        id: 'chair',
+        name: 'Chair',
+        image: '../assets/chair.jpg',
+    },
+    {
+        id: 'cthulhu',
+        name: 'Cthulhu',
+        image: '../assets/cthulhu.jpg',
+    },
+    {
+        id: 'dog-duck',
+        name: 'Dog Duck',
+        image: '../assets/dog-duck.jpg',
+    },
+    {
+        id: 'dragon',
+        name: 'Dragon',
+        image: '../assets/dragon.jpg',
+    },
+    {
+        id: 'pen',
+        name: 'Pen',
+        image: '../assets/pen.jpg',
+    },
+    {
+        id: 'pet-sweep',
+        name: 'Pet Sweep',
+        image: '../assets/pet-sweep.jpg',
+    },
+    {
+        id: 'scissors',
+        name: 'Scissors',
+        image: '../assets/scissors.jpg',
+    },
+    {
+        id: 'shark',
+        name: 'Shark',
+        image: '../assets/shark.jpg',
+    },
+    {
+        id: 'sweep',
+        name: 'Sweep',
+        image: '../assets/sweep.jpg',
+    },
+    {
+        id: 'tauntaun',
+        name: 'Taun taun',
+        image: '../assets/tauntaun.jpg',
+    },
+    {
+        id: 'unicorn',
+        name: 'Unicorn',
+        image: '../assets/unicorn.jpg',
+    },
+    {
+        id: 'usb',
+        name: 'USB',
+        image: '../assets/usb.jpg',
+    },
+    {
+        id: 'water-can',
+        name: 'Water Can',
+        image: '../assets/water-can.jpg',
+    },
+    {
+        id: 'wine-glass',
+        name: 'Wine Glass',
+        image: '../assets/wine-glass.jpg',
     },
 ];
