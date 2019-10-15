@@ -36,3 +36,9 @@ export const generateChoices = (itemData, previousDisplayArray) => {
     choiceArray = [choiceOne, choiceTwo, choiceThree];
     return choiceArray;
 };
+
+export const findById = (items, id) => {
+    const match = items.find(item => { if (item.id === id) return true; });
+
+    return match;
+};

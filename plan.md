@@ -14,3 +14,12 @@ Add an event handler that listens for click and stores the relevant data.
 This storage is an array with the id of each item, the number of times displayed, and the number of times clicked.
 Write a display refresh.
 Write the end-game function after 25 total choices have been made.
+
+NEW ORDER OF WORK 10/15
+Simplify functions by using four arrays: a master set, a generator array, an array of the three current choices, and a clicked / displayed array.
+We start by copying the api to create the master array.
+Each turn's display is created by subtracting the current choices array from the master set to create a generator array, and the generateRandomItem function splices the random item out of the generator array, removing it and returning it. These results are placed in a new current choices array.
+On subsequent choices, a new generator array is created from the master set - the current choice array. Then current choice array is emptied and repopulated with the generate function.
+We also need to store times displayed and times clicked. These are two arrays. We add if empty or increment if present the displayed on when generate function is called. We add if empty or increment if present the clicked when our event handler is called. Then turn count is iterated, then we generate new choices and redisplay. This requires writing two new utility methods that take item id as a parameter.
+Then we render our results from those items after 25 turns.
+Then we store that array locally.

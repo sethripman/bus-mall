@@ -1,0 +1,19 @@
+input[name="tree"] {
+    display: inline;
+}
+
+#tree-choice-container {
+    display: inline;
+}
+
+#quiz-section {
+    display: inline;
+}
+
+div {
+    display: inline;
+}
+
+input[type="radio"] {
+    visibility:hidden;
+}
