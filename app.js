@@ -27,6 +27,7 @@ const endGame = (turns) => {
         let choices = getChoices();
         alert(JSON.stringify(choices, true, 2));
     }
+    // adding chart generation
 };
 
 // On click function
@@ -56,3 +57,6 @@ const handleRadioButtonClick = (event) => {
 radioInputs.forEach((radioInput) => {
     radioInput.addEventListener('click', handleRadioButtonClick);
 });
+
+
+const ctx = document.getElementById('chart').getContext('2d');
