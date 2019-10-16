@@ -1,7 +1,3 @@
-input[name="tree"] {
-    display: inline;
-}
-
 #tree-choice-container {
     display: inline;
 }
@@ -14,6 +10,11 @@ div {
     display: inline;
 }
 
-input[type="radio"] {
-    visibility:hidden;
+input {
+    display: inline;
+    display: none;
+}
+
+img {
+    height: 250px;
 }

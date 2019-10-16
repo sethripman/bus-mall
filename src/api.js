@@ -72,7 +72,7 @@ export const itemData = [
     {
         id: 'sweep',
         name: 'Sweep',
-        image: '../assets/sweep.jpg',
+        image: '../assets/sweep.png',
     },
     {
         id: 'tauntaun',
@@ -87,7 +87,7 @@ export const itemData = [
     {
         id: 'usb',
         name: 'USB',
-        image: '../assets/usb.jpg',
+        image: '../assets/usb.gif',
     },
     {
         id: 'water-can',

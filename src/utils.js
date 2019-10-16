@@ -43,3 +43,14 @@ export const storeClick = (clickedDisplayArray, itemId) => {
     const found = findById(clickedDisplayArray, itemId);
     found.clicked++;
 };
+
+export const displayChoice = (choiceField, generatedChoice) => {
+    const input = choiceField.querySelector('input');
+    input.checked = false;
+    input.value = generatedChoice.id;
+
+    const img = choiceField.querySelector('img');
+    img.src = generatedChoice.image;
+};
+
+export default displayChoice;
