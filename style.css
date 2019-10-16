@@ -1,0 +1,28 @@
+#quiz-section {
+    display: inline;
+}
+
+div {
+    display: inline-flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+input {
+    display: inline;
+    display: none;
+}
+
+img {
+    height: 250px;
+}
+
+.hidden {
+    display: none;
+}
+
+h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
