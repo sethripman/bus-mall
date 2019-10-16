@@ -1,21 +1,31 @@
 // IMPORT MODULES under test here:
 // import example from '../src/example.js';
-import { storePreviousDisplay } from '../src/utils.js';
+import { removeById } from '../src/utils.js';
 
 const test = QUnit.test;
 
-test('stores previous display into an array of ids', function(assert) {
+test('removes an item by id', function(assert) {
     //Arrange
     // Set up your parameters and expectations
-    const testInputOne = 'A';
-    const testInputTwo = 'B';
-    const testInputThree = 'C';
+    const testArray = [
+        {
+            id: 'bag',
+            name: 'Bag',
+        },
+        {
+            id: 'banana',
+            name: 'Banana',
+        },
+    ];
 
-    const expected = ['A', 'B', 'C'];
+    const expected = [{
+        id: 'bag',
+        name: 'Bag'
+    }];
 
     //Act 
     // Call the function you're testing and set the result to a const
-    const output = storePreviousDisplay(testInputOne, testInputTwo, testInputThree);
+    const output = removeById(testArray, 'bag');
 
     //Assert
     // Make assertions about what is expected valid result

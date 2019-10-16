@@ -54,3 +54,21 @@ export const displayChoice = (choiceField, generatedChoice) => {
 };
 
 export default displayChoice;
+
+export const CHOICES_KEY = 'choices';
+
+export const getChoices = () => {
+    if (localStorage.getItem(CHOICES_KEY) === null) {
+        const serializedEmptyChoices = '[]';
+        localStorage.setItem(CHOICES_KEY, serializedEmptyChoices);
+    }
+    
+    const choices = JSON.parse(localStorage.getItem(CHOICES_KEY));
+    return choices;
+};
+
+export const setChoices = (currentDisplayArray) => {
+    // Serialize the current cart and then set in local storage
+    const serializedNewChoices = JSON.stringify(currentDisplayArray);
+    localStorage.setItem(CHOICES_KEY, serializedNewChoices);
+};

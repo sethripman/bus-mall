@@ -1,12 +1,13 @@
 import { itemData } from './src/api.js';
-import { generateChoice, storeDisplay, storeClick, displayChoice, removeById } from '../src/utils.js';
+import { generateChoice, storeDisplay, storeClick, displayChoice, removeById, getChoices, setChoices } from '../src/utils.js';
 
 // DOM Elements declaration
 const radioInputs = document.querySelectorAll('input[name=choice]');
 const choiceFields = document.querySelectorAll('.choice');
+const choiceContainer = document.getElementById('choice-container');
 
 // Initial state data
-let generatorArray = itemData;
+let generatorArray = itemData.slice();
 let currentChoicesArray = [];
 let clickedDisplayArray = [];
 let turns = 0;
@@ -21,20 +22,23 @@ for (let i = 0; i < 3; i++) {
 
 const endGame = (turns) => {
     if (turns === 25) {
-        disableGame(); // to be replaced with display end game function
+        choiceContainer.classList.add('hidden');
+        setChoices(clickedDisplayArray);
+        let choices = getChoices();
+        alert(JSON.stringify(choices, true, 2));
     }
 };
 
 // On click function
 const handleRadioButtonClick = (event) => {
-   // endGame(turns);
+    endGame(turns);
 
     const selected = event.target.value;
     storeClick(clickedDisplayArray, selected);
     turns++;
     
     // reset generator for next showing
-    generatorArray = itemData;
+    generatorArray = itemData.slice();
     for (let i = 0; i < 3; i++) {
         removeById(generatorArray, currentChoicesArray[i].id);
     }

@@ -18,3 +18,7 @@ input {
 img {
     height: 250px;
 }
+
+.hidden {
+    display: none;
+}
