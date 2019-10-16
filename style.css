@@ -1,13 +1,11 @@
-#tree-choice-container {
-    display: inline;
-}
-
 #quiz-section {
     display: inline;
 }
 
 div {
-    display: inline;
+    display: inline-flex;
+    justify-content: space-around;
+    align-items: center;
 }
 
 input {
@@ -21,4 +19,10 @@ img {
 
 .hidden {
     display: none;
+}
+
+h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

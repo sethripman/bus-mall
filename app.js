@@ -10,7 +10,7 @@ const choiceContainer = document.getElementById('choice-container');
 let generatorArray = itemData.slice();
 let currentChoicesArray = [];
 let clickedDisplayArray = [];
-let turns = 0;
+let turns = 1;
 
 // On page load, fill current choices array with three items spliced from generator array and store display
 for (let i = 0; i < 3; i++) {
