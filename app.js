@@ -1,7 +1,17 @@
 import { itemData } from './src/api.js';
-import { getRandomItem, storePreviousDisplay, generateChoices } from '../src/utils.js';
+import { generateChoice } from '../src/utils.js';
 
-let previousDisplayArray = ['', '', ''];
+let generatorArray = itemData;
+let currentChoicesArray = [];
+let clickedDisplayArray = [];
+
+let turns = 0;
+
+// on click + page load
+// Fill current choices array with three items spliced from generator array
+while (currentChoicesArray.length < 3) {
+    currentChoicesArray.push(generateChoice(generatorArray));
+}
 
 
 /* Event listener logic

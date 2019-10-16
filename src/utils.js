@@ -1,17 +1,39 @@
-// This takes an array and returns a random item from the array
 export const getRandomItem = (itemData) => {
     const randomItemIndex = Math.floor(Math.random() * itemData.length);
-
     return itemData[randomItemIndex];
 };
 
-//generates and returns an array of the current three IDs to be stored locally / compared against for dupes
+export const findById = (items, id) => {
+    const match = items.find(item => { if (item.id === id) return true; });
+    return match;
+};
+
+export const removeById = (someArray, someId) => {
+    let poppedItem;
+
+    for (let i = 0; i < someArray.length; i++) {
+        const item = someArray[i];
+        
+        if (item.id === someId) {
+            poppedItem = someArray.splice(i, 1);
+        }
+    }
+    return poppedItem;
+};
+
+export const generateChoice = (generatorArray) => {
+    const newChoice = getRandomItem(generatorArray);
+    removeById(generatorArray, newChoice.id);
+    return newChoice;
+};
+
+//generates and returns an array of the current three IDs to be stored locally / compared against for dupes - deprecated, new data model used
 export const storePreviousDisplay = (firstId, secondId, thirdId) => {
     const previousDisplay = [firstId, secondId, thirdId];
     return previousDisplay;
 };
 
-// Gets three random items, compares for duplicates, compares against previous displayed choices, returns array of three non-dupe items
+// Gets three random items, compares for duplicates, compares against previous displayed choices, returns array of three non-dupe items - deprecated, new data model used
 export const generateChoices = (itemData, previousDisplayArray) => {
     let choiceOne = getRandomItem(itemData);
     let choiceTwo = getRandomItem(itemData); 
@@ -35,10 +57,4 @@ export const generateChoices = (itemData, previousDisplayArray) => {
     // assign validated choices to an array and return the array
     choiceArray = [choiceOne, choiceTwo, choiceThree];
     return choiceArray;
-};
-
-export const findById = (items, id) => {
-    const match = items.find(item => { if (item.id === id) return true; });
-
-    return match;
 };
