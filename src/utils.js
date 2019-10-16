@@ -34,11 +34,11 @@ export const storeDisplay = (clickedDisplayArray, itemId) => {
         return;
     }
 
-    const displayedItem = { id: found.id, displayed: 1, clicked: 0 };
+    const displayedItem = { id: itemId, displayed: 1, clicked: 0 };
     clickedDisplayArray.push(displayedItem);
 };
 
-// Anything clicked must have been displayed, so no need for found logic
+// Anything clicked must have been displayed, so no need for if found logic
 export const storeClick = (clickedDisplayArray, itemId) => {
     const found = findById(clickedDisplayArray, itemId);
     found.clicked++;

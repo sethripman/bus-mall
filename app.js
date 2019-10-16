@@ -1,5 +1,5 @@
 import { itemData } from './src/api.js';
-import { generateChoice } from '../src/utils.js';
+import { generateChoice, storeDisplay, storeClick } from '../src/utils.js';
 
 let generatorArray = itemData;
 let currentChoicesArray = [];
@@ -12,6 +12,17 @@ let turns = 0;
 while (currentChoicesArray.length < 3) {
     currentChoicesArray.push(generateChoice(generatorArray));
 }
+
+storeDisplay(clickedDisplayArray, 'butts');
+debugger;
+storeDisplay(clickedDisplayArray, 'butts');
+debugger;
+storeDisplay(clickedDisplayArray, 'zoot');
+debugger;
+storeClick(clickedDisplayArray, 'butts');
+debugger;
+storeClick(clickedDisplayArray, 'butts');
+debugger;
 
 
 /* Event listener logic
