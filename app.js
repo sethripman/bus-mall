@@ -10,7 +10,7 @@ const choiceContainer = document.getElementById('choice-container');
 let generatorArray = itemData.slice();
 let currentChoicesArray = [];
 let clickedDisplayArray = [];
-let turns = 1;
+let turns = 20;
 
 // On page load, fill current choices array with three items spliced from generator array and store display
 for (let i = 0; i < 3; i++) {
@@ -20,6 +20,36 @@ for (let i = 0; i < 3; i++) {
     displayChoice(choiceFields[i], currentChoicesArray[i]);
 }
 
+const getChartDisplayData = (clickedDisplayArray) => {
+    let copyInputArray = clickedDisplayArray.slice();
+    let displayArray = [];
+    while (copyInputArray.length > 0) {
+        let poppedDisplay = copyInputArray.pop();
+        displayArray.push(poppedDisplay.displayed);
+    }
+    return displayArray;
+};
+
+const getChartClickData = (clickedDisplayArray) => {
+    let copyInputArray = clickedDisplayArray.slice();
+    let clickArray = [];
+    while (copyInputArray.length > 0) {
+        let poppedClick = copyInputArray.pop();
+        clickArray.push(poppedClick.clicked);
+    }
+    return clickArray;
+};
+
+const getChartLabels = (clickedDisplayArray) => {
+    let copyInputArray = clickedDisplayArray.slice();
+    let labelArray = [];
+    while (copyInputArray.length > 0) {
+        let poppedLabel = copyInputArray.pop();
+        labelArray.push(poppedLabel.id);
+    }
+    return labelArray;
+};
+
 const endGame = (turns) => {
     if (turns === 25) {
         choiceContainer.classList.add('hidden');
@@ -27,7 +57,23 @@ const endGame = (turns) => {
         let choices = getChoices();
         alert(JSON.stringify(choices, true, 2));
     }
+    
     // adding chart generation
+    
+    const labels = [getChartLabels(clickedDisplayArray)];
+    const data = [getChartDisplayData(clickedDisplayArray), getChartClickData()];
+
+    new Chart(ctx, {
+        type: 'radar',
+        data: {
+            labels: labels,
+            datasets: [{
+                label: '# of Votes',
+                data: data,
+                backgroundColor: ['cyan', 'magenta']
+            }]
+        },
+    });
 };
 
 // On click function
